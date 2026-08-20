@@ -176,6 +176,7 @@ bindsym $mod+space exec --no-startup-id "$menu"
 bindsym $mod+b bar mode toggle
 bindsym $mod+period exec --no-startup-id "rofi -show emoji"
 bindsym $mod+a exec --no-startup-id "rofi -show window"
+bindsym Mod1+Tab exec --no-startup-id "rofi -show window"
 bindsym $mod+v exec --no-startup-id "cliphist list | rofi -dmenu -p 'Clipboard' -lines 10 -width 35 | cliphist decode | xclip -selection clipboard"
 bindsym $mod+Shift+v exec --no-startup-id "cliphist list | rofi -dmenu -p 'Delete item' -lines 10 -width 35 | cliphist delete"
 bindsym $mod+q kill

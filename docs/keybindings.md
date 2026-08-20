@@ -6,6 +6,7 @@ Default keybindings are based on [i3 keybindings](https://i3wm.org/docs/userguid
 
 | Keybinding                                         | Action                                  |
 | -------------------------------------------------- | --------------------------------------- |
+| <kbd>Alt</kbd> + <kbd>Tab</kbd>                    | Window switcher (Rofi)                  |
 | <kbd>Mod</kbd> + <kbd>Enter</kbd>                  | Open Terminal (kitty)                   |
 | <kbd>Mod</kbd> + <kbd>Shift + Enter / F12</kbd>    | Open Floating terminal                  |
 | <kbd>Mod</kbd> + <kbd>Space</kbd>                  | Open app launcher (Rofi)                |
@@ -15,7 +16,6 @@ Default keybindings are based on [i3 keybindings](https://i3wm.org/docs/userguid
 | <kbd>Mod</kbd> + <kbd>Shift + \</kbd>              | Layout: Split Vertical                  |
 | <kbd>Mod</kbd> + <kbd>b</kbd>                      | Toggle i3bar                            |
 | <kbd>Mod</kbd> + <kbd>v</kbd>                      | Open clipboard history (cliphist)       |
-| <kbd>Mod</kbd> + <kbd>Shift + v</kbd>              | Delete item from clipboard history      |
 | <kbd>Mod</kbd> + <kbd>a</kbd>                      | Window switcher (Rofi)                  |
 | <kbd>Mod</kbd> + <kbd>.</kbd>                      | Open emoji picker                       |
 | <kbd>Mod</kbd> + <kbd>[</kbd>                      | Focus or launch terminal                |
