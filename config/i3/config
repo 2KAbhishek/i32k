@@ -1,0 +1,337 @@
+# i3 config file (v4)
+# Configured with Sway (sway2k) essentials & BWnB aesthetics for Xorg
+
+### Variables
+set $mod Mod4
+set $alt_mod Mod1
+
+# Direction keys
+set $left Left
+set $down Down
+set $up Up
+set $right Right
+
+set $left_alt h
+set $down_alt j
+set $up_alt k
+set $right_alt l
+
+# Preferred Applications
+set $terminal kitty
+set $browser chromium
+set $editor nvim
+set $gui-font Roboto 10
+set $term-font FiraCode Nerd Font 10
+
+# Input Configuration (Keyboard & Key Repeat)
+exec_always --no-startup-id setxkbmap -layout us -option "" -option caps:escape
+exec_always --no-startup-id xset r rate 250 70
+
+# Helper scripts
+set $scripts $HOME/.config/i3/scripts
+set $term_float $terminal --class floating_shell
+
+# Launchers
+set $menu rofi -show combi -combi-modi drun,run -terminal kitty -show-icons -lines 10 -width 35
+
+# Font for window titles and bar
+font xft:FiraCode Nerd Font 10
+
+# Border and Gaps configuration
+default_border pixel 2
+default_floating_border pixel 2
+hide_edge_borders smart_no_gaps
+
+gaps inner 5
+gaps outer 5
+smart_gaps on
+
+# Drag floating windows with Mouse + $mod
+floating_modifier $mod
+
+# Escape keybinding disabled (global bindsym Escape swallows Escape key in all apps)
+# bindsym Escape [instance="floating_shell" con_id=__focused__] kill
+
+# Color Palette (BWnB Dark Theme)
+set $color0  #000000
+set $color1  #282a2b
+set $color2  #3B758C
+set $color3  #41535B
+set $color4  #43a5d5
+set $color5  #d6d6d6
+set $color6  #eeeeee
+set $color7  #ffffff
+set $color8  #ff0043
+set $color9  #db7b55
+set $color10 #e6cd69
+set $color11 #9fca56
+set $color12 #1688f0
+set $color13 #55b5db
+set $color14 #a074c4
+set $color15 #8a553f
+
+# Window Colors (Property Name: Border BG Text Indicator Child_Border)
+client.focused          $color12 $color12 $color0 $color6   $color12
+client.focused_inactive $color1  $color1  $color5 $color3   $color1
+client.unfocused        $color1  $color0  $color5 $color6   $color1
+client.urgent           $color8  $color8  $color0 $color9   $color8
+client.placeholder      $color0  $color0  $color5 $color0   $color0
+client.background       $color0
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move focused container to workspace and follow focus
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
+
+# Navigation across workspaces
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+# Focus Movement
+bindsym $mod+$left_alt focus left
+bindsym $mod+$down_alt focus down
+bindsym $mod+$up_alt focus up
+bindsym $mod+$right_alt focus right
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Move Focused Window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+$left_alt move left
+bindsym $mod+Shift+$down_alt move down
+bindsym $mod+Shift+$up_alt move up
+bindsym $mod+Shift+$right_alt move right
+
+# Move Focused Workspace to Output
+bindsym $mod+$alt_mod+$right move workspace to output right
+bindsym $mod+$alt_mod+$left move workspace to output left
+bindsym $mod+$alt_mod+$down move workspace to output down
+bindsym $mod+$alt_mod+$up move workspace to output up
+
+bindsym $mod+$alt_mod+$right_alt move workspace to output right
+bindsym $mod+$alt_mod+$left_alt move workspace to output left
+bindsym $mod+$alt_mod+$down_alt move workspace to output down
+bindsym $mod+$alt_mod+$up_alt move workspace to output up
+
+# Layout & Minimize Controls
+bindsym $mod+e move scratchpad
+bindsym $mod+Shift+e scratchpad show
+bindsym $mod+backslash split h
+bindsym $mod+Shift+backslash split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f floating toggle
+bindsym $mod+p focus parent
+bindsym $mod+Shift+p focus mode_toggle
+bindsym $mod+t layout tabbed
+bindsym $mod+Shift+t layout stacking
+bindsym $mod+s layout toggle all
+bindsym F11 fullscreen toggle
+
+# Application Launchers & Shortcuts
+bindsym $mod+Return exec --no-startup-id $terminal
+bindsym $mod+Shift+Return exec --no-startup-id $term_float
+bindsym F12 exec --no-startup-id $term_float
+
+bindsym $mod+bracketleft exec --no-startup-id "$scripts/focus_or_launch.sh $terminal"
+bindsym $mod+bracketright exec --no-startup-id "$scripts/focus_or_launch.sh $browser"
+
+bindsym $mod+space exec --no-startup-id "$menu"
+bindsym $mod+b bar mode toggle
+bindsym $mod+period exec --no-startup-id "rofi -show emoji"
+bindsym $mod+a exec --no-startup-id "rofi -show window"
+bindsym $mod+v exec --no-startup-id "cliphist list | rofi -dmenu -p 'Clipboard' -lines 10 -width 35 | cliphist decode | xclip -selection clipboard"
+bindsym $mod+Shift+v exec --no-startup-id "cliphist list | rofi -dmenu -p 'Delete item' -lines 10 -width 35 | cliphist delete"
+bindsym $mod+q kill
+bindsym $mod+Shift+r restart
+
+# Rofi Move & Empty Workspace Helpers
+bindsym $mod+m exec "$scripts/rofi-move-to-workspace.sh"
+bindsym $mod+Shift+m exec "$scripts/first-empty-workspace.sh --move --switch"
+bindsym $mod+n exec "$scripts/first-empty-workspace.sh --switch"
+bindsym $mod+Shift+n exec "$scripts/first-empty-workspace.sh --move"
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+plus scratchpad show
+
+# Media & Hardware Keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 || brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 || brightnessctl set 10%-
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Mode: Resize & Gaps
+set $mode_resize "Resize: hjkl/Arrows | Gaps: +/-"
+bindsym $mod+r mode $mode_resize
+
+mode $mode_resize {
+    bindsym $left resize shrink width 10 px
+    bindsym $down resize grow height 10 px
+    bindsym $up resize shrink height 10 px
+    bindsym $right resize grow width 10 px
+
+    bindsym $left_alt resize shrink width 10 px
+    bindsym $down_alt resize grow height 10 px
+    bindsym $up_alt resize shrink height 10 px
+    bindsym $right_alt resize grow width 10 px
+
+    bindsym Shift+$left resize shrink width 50 px
+    bindsym Shift+$down resize grow height 50 px
+    bindsym Shift+$up resize shrink height 50 px
+    bindsym Shift+$right resize grow width 50 px
+
+    bindsym Shift+$left_alt resize shrink width 50 px
+    bindsym Shift+$down_alt resize grow height 50 px
+    bindsym Shift+$up_alt resize shrink height 50 px
+    bindsym Shift+$right_alt resize grow width 50 px
+
+    bindsym minus gaps inner current minus 5
+    bindsym plus gaps inner current plus 5
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Mode: Screenshot (maim + xclip + swappy)
+set $mode_screenshot "Screenshot: [s] Copy Area | [f] Save Area | [e] Edit Swappy | [o] Save Screen"
+bindsym Print mode $mode_screenshot
+bindsym $mod+Shift+s mode $mode_screenshot
+
+mode $mode_screenshot {
+    bindsym s mode "default", exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+    bindsym f mode "default", exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png"
+    bindsym e mode "default", exec --no-startup-id maim -s | swappy -f -
+    bindsym o mode "default", exec --no-startup-id maim "$HOME/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Mode: System / Shutdown
+set $mode_shutdown "System: [l]ock | [e]xit | [u]spend | [r]eboot | [s]hutdown"
+bindsym $mod+Shift+q mode $mode_shutdown
+
+mode $mode_shutdown {
+    bindsym l mode "default", exec --no-startup-id xflock4
+    bindsym e exec --no-startup-id xfce4-session-logout --logout
+    bindsym u mode "default", exec --no-startup-id xfce4-session-logout --suspend
+    bindsym r exec --no-startup-id xfce4-session-logout --reboot
+    bindsym s exec --no-startup-id xfce4-session-logout --halt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Window Rules (for_window)
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+
+for_window [class="(?i)Lxappearance"] floating enable sticky enable
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Galculator"] floating enable border pixel 2
+for_window [class="GParted"] floating enable
+for_window [class="Nitrogen"] floating enable sticky enable
+for_window [class="octopi"] floating enable
+for_window [class="floating_shell"] floating enable border pixel 2 sticky enable
+for_window [title="(?i)picture-in-picture"] floating enable sticky enable
+for_window [title="(?i)alsamixer"] floating enable border pixel 2
+for_window [class="(?i)hubstaff"] floating enable, sticky disable
+
+# XFCE Settings & Dialog Rules
+for_window [class="Xfce4-settings-manager"] floating enable
+for_window [class="Xfce4-appearance-settings"] floating enable
+for_window [class="Xfce4-display-settings"] floating enable
+for_window [class="Xfce4-power-manager-settings"] floating enable
+for_window [class="Xfce4-session-logout"] floating enable
+for_window [class="Xfce4-appfinder"] floating enable
+for_window [class="Xfdesktop"] kill
+
+for_window [urgent=latest] focus
+
+# Autostart Services & Applications
+# Note: polkit, nm-applet, and xfce4-power-manager are handled by XFCE.
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id nm-applet
+# exec --no-startup-id xfce4-power-manager
+# Note: Commented out commands not currently installed: nitrogen, picom, volumeicon, xautolock
+# exec --no-startup-id nitrogen --restore
+# exec --no-startup-id picom -b
+# exec --no-startup-id volumeicon
+# exec --no-startup-id xautolock -time 10 -locker xflock4
+exec --no-startup-id $HOME/.config/i3/scripts/cliphist-x11-daemon.py &
+
+# i3bar setup with toggle support ($mod+b)
+bar {
+    mode hide
+    hidden_state hide
+    modifier Mod4
+    i3bar_command i3bar
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position bottom
+    strip_workspace_numbers yes
+    bindsym button4 nop
+    bindsym button5 nop
+
+    colors {
+        background $color0
+        statusline $color6
+        separator  $color3
+
+        #                  border   bg       text
+        focused_workspace  $color12 $color12 $color0
+        active_workspace   $color3  $color1  $color6
+        inactive_workspace $color1  $color0  $color5
+        binding_mode       $color12 $color2  $color7
+        urgent_workspace   $color8  $color8  $color0
+    }
+}
