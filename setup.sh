@@ -19,6 +19,6 @@ mkdir -p ~/Pictures/Screenshots/
 mkdir -p ~/.config/i3
 
 echo "Creating symlinks to ~/.config..."
-ln -sfnv "$PWD"/config/i3 ~/.config/i3
+ln -sfnv "$PWD"/i3 ~/.config/i3
 
 echo "Setup completed successfully!"
