@@ -1,6 +1,6 @@
 # [i3xfce2k](https://github.com/2kabhishek/i3xfce2k) [Keybindings](https://github.com/2KAbhishek/i3xfce2k/blob/main/docs/keybindings.md)
 
-Default keybindings are based on [i3 keybindings](https://i3wm.org/docs/userguide.html#_default_keybindings) customized for XFCE desktop environment integration.
+Default keybindings are based on [i3 keybindings](https://i3wm.org/docs/userguide.html#_default_keybindings) customized to work seamlessly in both XFCE hybrid and standalone i3 sessions.
 
 > <kbd>Mod</kbd> is the <kbd>Super</kbd> or <kbd>Windows</kbd> key.
 

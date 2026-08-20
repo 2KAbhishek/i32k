@@ -66,6 +66,11 @@ Highly recommended to use this alongside the following configurations:
 
 ## 🚀 Usage
 
+### Sessions
+
+- **XFCE + i3 Session (Default)**: Select `XFCE Session` from your login manager. Runs `i3` natively as the window manager with full XFCE panel and session integration.
+- **Standalone i3 Session**: Select `i3` from your login manager. Automatically runs independently with background services, `i3bar` + `i3status`, and touchpad controls.
+
 ### Keybindings
 
 All the configured keybindings can be found in the [keybinding manual here](./docs/keybindings.md).
