@@ -18,12 +18,18 @@ Default keybindings are based on [i3 keybindings](https://i3wm.org/docs/userguid
 | <kbd>Mod</kbd> + <kbd>Shift + v</kbd>            | Delete item from clipboard history     |
 | <kbd>Mod</kbd> + <kbd>a</kbd>                    | Window switcher (Rofi)                 |
 | <kbd>Mod</kbd> + <kbd>.</kbd>                    | Open emoji picker                      |
+| <kbd>Mod</kbd> + <kbd>[</kbd>                    | Focus or launch terminal               |
+| <kbd>Mod</kbd> + <kbd>]</kbd>                    | Focus or launch browser                |
 | <kbd>Mod</kbd> + <kbd>Tab</kbd>                  | Switch to most recent workspace        |
 | <kbd>Mod</kbd> + <kbd>Ctrl + Left/Right</kbd>    | Move between workspaces                |
 | <kbd>Mod</kbd> + <kbd>0-9</kbd>                  | Switch focused workspace               |
 | <kbd>Mod</kbd> + <kbd>Shift + 0-9</kbd>          | Move focused window to workspace       |
-| <kbd>Mod</kbd> + <kbd>h/j/k/l</kbd>              | Focus left / down / up / right         |
-| <kbd>Mod</kbd> + <kbd>Shift + h/j/k/l</kbd>      | Move window left / down / up / right   |
+| <kbd>Mod</kbd> + <kbd>m</kbd>                    | Move focused window to workspace (Rofi)|
+| <kbd>Mod</kbd> + <kbd>Shift + m</kbd>            | Move window to first empty workspace   |
+| <kbd>Mod</kbd> + <kbd>n</kbd>                    | Switch to first empty workspace        |
+| <kbd>Mod</kbd> + <kbd>Shift + n</kbd>            | Move focused window to empty workspace |
+| <kbd>Mod</kbd> + <kbd>h/j/k/l/arrows</kbd>       | Focus left / down / up / right         |
+| <kbd>Mod</kbd> + <kbd>Shift + h/j/k/l/arrows</kbd> | Move window left / down / up / right   |
 | <kbd>Mod</kbd> + <kbd>Alt + h/j/k/l/arrows</kbd> | Move workspace to screen output        |
 | <kbd>Mod</kbd> + <kbd>f / F11</kbd>              | Toggle fullscreen                      |
 | <kbd>Mod</kbd> + <kbd>Shift + f</kbd>            | Toggle floating                        |
