@@ -30,7 +30,7 @@
 
 </div>
 
-Personalized, bloat-free configuration for [i3 window manager](https://i3wm.org/) engineered for pure simplicity, instant responsiveness, and extreme resource efficiency. 
+Personalized, bloat-free configuration for [i3 window manager](https://i3wm.org/) engineered for pure simplicity, instant responsiveness, and extreme resource efficiency.
 
 Zero desktop environment overhead — just pure, keyboard-driven tiling with modern developer tooling.
 
@@ -64,7 +64,7 @@ Highly recommended to use this alongside the following configurations:
 - [dots2k](https://github.com/2kabhishek/dots2k) CLI Dev Environment
 - [nvim2k](https://github.com/2kabhishek/nvim2k) Personalized Editor
 - [rofi2k](https://github.com/2kabhishek/rofi2k) Rofi Configuration
-- [sway2k](https://github.com/2kabhishek/sway2k) Wayland Desktop Environment
+- [qute2k](https://github.com/2kabhishek/qute2k) — Personalized Browser
 
 ## 🚀 Usage
 
@@ -83,18 +83,6 @@ Built out of a need for a lightning-fast, distraction-free X11 environment that 
 - Crafting a standalone, self-sufficient i3 desktop without relying on heavy desktop environment daemons
 - Optimizing status indicators with compiled `i3status` for minimum CPU and battery impact
 - Designing clean, friction-free keyboard shortcuts for window and workspace management
-
-### 🧰 Tooling
-
-- [dots2k](https://github.com/2kabhishek/dots2k) — Dev Environment
-- [nvim2k](https://github.com/2kabhishek/nvim2k) — Personalized Editor
-- [sway2k](https://github.com/2kabhishek/sway2k) — Desktop Environment
-- [qute2k](https://github.com/2kabhishek/qute2k) — Personalized Browser
-
-### 🔍 More Info
-
-- [sway2k](https://github.com/2kabhishek/sway2k) — Wayland based tiling wm configs
-- [dots2k](https://github.com/2kabhishek/dots2k) — Dev Environment
 
 <hr>
 
