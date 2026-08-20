@@ -3,9 +3,10 @@
 Lightweight X11 Clipboard Watcher for cliphist
 Listens for X11 clipboard owner changes and pipes content into `cliphist store`.
 """
+
 import subprocess
 import time
-import sys
+
 
 def get_x11_clipboard():
     try:
@@ -13,11 +14,12 @@ def get_x11_clipboard():
             ["xclip", "-selection", "clipboard", "-o"],
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
-            timeout=2
+            timeout=2,
         )
         return proc.stdout
     except Exception:
         return None
+
 
 def store_cliphist(data):
     if not data:
@@ -27,6 +29,7 @@ def store_cliphist(data):
         proc.communicate(input=data, timeout=2)
     except Exception:
         pass
+
 
 def main():
     last_clip = None
@@ -39,6 +42,7 @@ def main():
         except Exception:
             pass
         time.sleep(1.0)
+
 
 if __name__ == "__main__":
     main()
