@@ -7,8 +7,9 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     echo "Arch Linux detected. Preparing to install dependencies..."
 
     sudo pacman -S --needed \
-        i3-wm i3status rofi rofi-emoji kitty xclip cliphist \
-        swappy maim xorg-xbacklight feh \
+        i3-wm i3status i3lock rofi rofi-emoji kitty xclip cliphist \
+        swappy maim xorg-xbacklight feh polkit-gnome network-manager-applet \
+        xfce4-power-manager thunar tumbler thunar-archive-plugin thunar-volman \
         ttf-firacode-nerd ttf-roboto python
 else
     echo "Warning: This script only supports package installation on Arch-based systems."
