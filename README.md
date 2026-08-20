@@ -37,7 +37,7 @@ My personalized configs for [i3 window manager](https://i3wm.org/) embedded insi
 - Optimized for keyboard driven CLI workflow with i3 tiling
 - Full XFCE session management, panel applets, and GTK theme support
 - Minimalistic UI, optimized for AMOLED displays
-- Customized i3blocks status bar with interactive hardware modules
+- Customized i3status status bar with modern Nerd Font v3 icons and system modules
 - Integrated launcher, emoji picker, window switcher, and clipboard manager via Rofi & cliphist
 
 ## ⚡ Setup

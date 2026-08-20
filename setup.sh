@@ -7,7 +7,7 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     echo "Arch Linux detected. Preparing to install dependencies..."
 
     sudo pacman -S --needed \
-        i3-wm i3blocks rofi rofi-emoji kitty xclip cliphist swappy \
+        i3-wm i3status rofi rofi-emoji kitty xclip cliphist swappy \
         xfce4 xfce4-panel xfce4-session xfce4-settings xfconf \
         ttf-firacode-nerd ttf-roboto python
 else

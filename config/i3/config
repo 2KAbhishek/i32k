@@ -320,8 +320,7 @@ bar {
     hidden_state hide
     modifier Mod4
     i3bar_command i3bar
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    # status_command i3status -c ~/.config/i3/i3status.conf
+    status_command i3status -c ~/.config/i3/i3status.conf
     position top
     strip_workspace_numbers yes
     bindsym button4 nop
