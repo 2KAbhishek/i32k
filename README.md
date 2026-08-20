@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/i32k/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/i32k?style=flat&color=e06c75&label="> </a>
 
-<h3>Personalized Tiling Desktop Environment for X11 🎏🛣</h3>
+<h3>Simple and Fast i3 X11 Setup ⚡🪟</h3>
 
 <figure>
   <img src="docs/images/screenshot.png" alt="i32k in action">
@@ -30,16 +30,18 @@
 
 </div>
 
-My personalized configs for [i3 window manager](https://i3wm.org/), minimalistic in design and optimized for developer productivity, keyboard-driven speed, and low resource footprint.
+Personalized, bloat-free configuration for [i3 window manager](https://i3wm.org/) engineered for pure simplicity, instant responsiveness, and extreme resource efficiency. 
+
+Zero desktop environment overhead — just pure, keyboard-driven tiling with modern developer tooling.
 
 ## ✨ Features
 
-- Optimized for keyboard driven CLI workflow with i3 tiling
-- Minimalistic UI, optimized for AMOLED displays
-- Customized top i3status status bar with modern Nerd Font v3 icons and dynamic toggle support (`Win + b`)
-- Integrated launcher, emoji picker, window switcher, and clipboard manager via Rofi & cliphist
-- Seamless auto-mounting, power management, and Dropbox integration
-- Dedicated scratchpad minimize/restore controls (`Win + e` / `Win + Shift + e`)
+- **Blazing Fast & Ultra-Light**: Near-zero idle footprint, instant window management, and zero desktop bloat
+- **Keyboard-Centric Workflow**: Intuitive tiling, workspace cycling, and dedicated scratchpad controls (`Win + e` / `Win + Shift + e`)
+- **Clean Top Status Bar**: Lightweight `i3status` featuring modern Nerd Font v3 icons and dynamic toggle support (`Win + b`)
+- **Integrated Utilities**: Seamless application launcher, window switcher, emoji picker, and clipboard manager via Rofi & cliphist
+- **AMOLED-Optimized Aesthetic**: Minimalist, distraction-free color palette tuned for focus and low eye strain
+- **Native System Controls**: Instant lock, sleep, reboot, and shutdown shortcuts with zero lag
 
 ## ⚡ Setup
 
@@ -74,13 +76,13 @@ All the configured keybindings can be found in the [keybinding manual here](./do
 
 ### 🌈 Inspiration
 
-Needed a light, fast, and robust X11 tiling setup for developer workstations.
+Built out of a need for a lightning-fast, distraction-free X11 environment that gets out of the way and lets you focus on coding.
 
 ### 💡 Challenges/Learnings
 
-- Creating a clean, standalone i3 desktop without heavy desktop environment dependencies
-- Configuring lightweight status metrics and dynamic bar toggling
-- Seamless clipboard history and screenshot integration
+- Crafting a standalone, self-sufficient i3 desktop without relying on heavy desktop environment daemons
+- Optimizing status indicators with compiled `i3status` for minimum CPU and battery impact
+- Designing clean, friction-free keyboard shortcuts for window and workspace management
 
 ### 🧰 Tooling
 
