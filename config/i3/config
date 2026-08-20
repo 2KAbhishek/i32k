@@ -23,9 +23,10 @@ set $editor nvim
 set $gui-font Roboto 10
 set $term-font FiraCode Nerd Font 10
 
-# Input Configuration (Keyboard & Key Repeat)
+# Input Configuration (Keyboard, Repeat Rate & Touchpad)
 exec_always --no-startup-id setxkbmap -layout us -option "" -option caps:escape
 exec_always --no-startup-id xset r rate 250 70
+exec_always --no-startup-id sh -c 'for id in $(xinput list 2>/dev/null | grep -i "touchpad" | grep -o "id=[0-9]*" | cut -d= -f2); do xinput set-prop "$id" "libinput Tapping Enabled" 1 2>/dev/null; xinput set-prop "$id" "libinput Natural Scrolling Enabled" 1 2>/dev/null; xinput set-prop "$id" "libinput Accel Speed" 0.3 2>/dev/null; done'
 
 # Helper scripts
 set $scripts $HOME/.config/i3/scripts
@@ -295,14 +296,8 @@ for_window [class="Xfdesktop"] kill
 
 for_window [urgent=latest] focus
 
-# Autostart background services & Touchpad setup ONLY when running standalone i3 (skipped under XFCE session)
+# Autostart background services ONLY when running standalone i3 (skipped under XFCE session)
 exec --no-startup-id sh -c 'if ! pgrep -x xfce4-session >/dev/null 2>&1; then \
-    TP=$(xinput list --name-only 2>/dev/null | grep -i "touchpad" | sed -e "s/^[[:space:]]*//" -e "s/^[^a-zA-Z0-9]*//" | head -n1); \
-    if [ -n "$TP" ]; then \
-        xinput set-prop "$TP" "libinput Tapping Enabled" 1 2>/dev/null; \
-        xinput set-prop "$TP" "libinput Natural Scrolling Enabled" 1 2>/dev/null; \
-        xinput set-prop "$TP" "libinput Accel Speed" 0.3 2>/dev/null; \
-    fi; \
     [ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ] && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & \
     command -v nm-applet >/dev/null && nm-applet & \
     command -v xfce4-power-manager >/dev/null && xfce4-power-manager & \
