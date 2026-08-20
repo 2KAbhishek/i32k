@@ -285,33 +285,21 @@ for_window [title="(?i)picture-in-picture"] floating enable sticky enable
 for_window [title="(?i)alsamixer"] floating enable border pixel 2
 for_window [class="(?i)hubstaff"] floating enable, sticky disable
 
-# XFCE Settings & Dialog Rules
-for_window [class="Xfce4-settings-manager"] floating enable
-for_window [class="Xfce4-appearance-settings"] floating enable
-for_window [class="Xfce4-display-settings"] floating enable
-for_window [class="Xfce4-power-manager-settings"] floating enable
-for_window [class="Xfce4-session-logout"] floating enable
-for_window [class="Xfce4-appfinder"] floating enable
-for_window [class="Xfdesktop"] kill
-
 for_window [urgent=latest] focus
 
-# Autostart background services ONLY when running standalone i3 (skipped under XFCE session)
-exec --no-startup-id sh -c 'if ! pgrep -x xfce4-session >/dev/null 2>&1; then \
-    [ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ] && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & \
-    command -v nm-applet >/dev/null && nm-applet & \
-    command -v xfce4-power-manager >/dev/null && xfce4-power-manager & \
-    command -v nitrogen >/dev/null && nitrogen --restore & \
-    command -v volumeicon >/dev/null && volumeicon & \
-    command -v xautolock >/dev/null && xautolock -time 10 -locker xflock4 & \
-fi'
-
-exec --no-startup-id $HOME/.config/i3/scripts/cliphist-x11-daemon.py &
+# Autostart background services
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id $HOME/.config/i3/scripts/cliphist-x11-daemon.py
+exec --no-startup-id sh -c 'command -v dropbox >/dev/null 2>&1 && dropbox start'
+exec --no-startup-id sh -c 'command -v nitrogen >/dev/null 2>&1 && nitrogen --restore'
+exec --no-startup-id sh -c 'command -v picom >/dev/null 2>&1 && picom -b'
+exec --no-startup-id sh -c 'command -v xautolock >/dev/null 2>&1 && xautolock -time 10 -locker i3lock'
 
 # i3bar setup with toggle support ($mod+b)
 bar {
-    mode hide
-    hidden_state hide
+    mode dock
     modifier Mod4
     i3bar_command i3bar
     status_command i3status -c ~/.config/i3/i3status.conf
