@@ -255,11 +255,11 @@ set $mode_shutdown "System: [l]ock | [e]xit | [u]spend | [r]eboot | [s]hutdown"
 bindsym $mod+Shift+q mode $mode_shutdown
 
 mode $mode_shutdown {
-    bindsym l mode "default", exec --no-startup-id sh -c 'if pgrep -x xfce4-session >/dev/null 2>&1 && command -v xflock4 >/dev/null; then xflock4; elif command -v i3lock >/dev/null; then i3lock -c 000000; else loginctl lock-session; fi'
-    bindsym e exec --no-startup-id sh -c 'if pgrep -x xfce4-session >/dev/null 2>&1; then xfce4-session-logout --logout; else i3-msg exit; fi'
-    bindsym u mode "default", exec --no-startup-id systemctl suspend
-    bindsym r exec --no-startup-id systemctl reboot
-    bindsym s exec --no-startup-id systemctl poweroff
+    bindsym l mode "default", exec --no-startup-id $scripts/session.sh lock
+    bindsym e exec --no-startup-id $scripts/session.sh logout
+    bindsym u mode "default", exec --no-startup-id $scripts/session.sh suspend
+    bindsym r exec --no-startup-id $scripts/session.sh reboot
+    bindsym s exec --no-startup-id $scripts/session.sh shutdown
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
