@@ -8,7 +8,7 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
 
     sudo pacman -S --needed \
         i3-wm i3status rofi rofi-emoji kitty xclip cliphist \
-        swappy maim picom xorg-xbacklight feh volumeicon \
+        swappy maim xorg-xbacklight feh volumeicon \
         xfce4 xfce4-goodies ttf-firacode-nerd ttf-roboto python
 else
     echo "Warning: This script only supports package installation on Arch-based systems."

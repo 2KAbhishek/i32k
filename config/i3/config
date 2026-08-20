@@ -302,7 +302,6 @@ exec --no-startup-id sh -c 'if ! pgrep -x xfce4-session >/dev/null 2>&1; then \
     command -v nm-applet >/dev/null && nm-applet & \
     command -v xfce4-power-manager >/dev/null && xfce4-power-manager & \
     command -v nitrogen >/dev/null && nitrogen --restore & \
-    command -v picom >/dev/null && picom -b & \
     command -v volumeicon >/dev/null && volumeicon & \
     command -v xautolock >/dev/null && xautolock -time 10 -locker xflock4 & \
 fi'
