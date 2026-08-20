@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/i3xfce2k/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/i3xfce2k?style=flat&color=e06c75&label="> </a>
 
-<h3>Short Sweet Headline 🎇🎉</h3>
+<h3>Hybrid Tiling Desktop Environment for X11 🎏🛣</h3>
 
 <figure>
   <img src="docs/images/screenshot.png" alt="i3xfce2k in action">
@@ -30,59 +30,55 @@
 
 </div>
 
-i3xfce2k is a `<utility/tool>` that allows `<target_audience>` to `<action>`.
+My personalized configs for [i3 window manager](https://i3wm.org/) embedded inside [XFCE Desktop Environment](https://www.xfce.org/), minimalistic in design and optimized for developer productivity and speed.
 
 ## ✨ Features
 
-- Comes with a ready to go README template
-- Works with [mkrepo](https://github.com/2kabhishek/mkrepo)
+- Optimized for keyboard driven CLI workflow with i3 tiling
+- Full XFCE session management, panel applets, and GTK theme support
+- Minimalistic UI, optimized for AMOLED displays
+- Customized i3blocks status bar with interactive hardware modules
+- Integrated launcher, emoji picker, window switcher, and clipboard manager via Rofi & cliphist
 
 ## ⚡ Setup
 
 ### ⚙️ Requirements
 
-- foo >= bar
-- bazz
+Run [setup.sh](setup.sh) to install dependencies on Arch-based systems, or refer to it for manual installation on other distros.
 
 ### 💻 Installation
-
-Installing i3xfce2k is as simple as cloning and symlinking!
 
 ```bash
 git clone https://github.com/2kabhishek/i3xfce2k
 cd i3xfce2k
-<install_command>
+./setup.sh
 ```
+
+#### Recommended Configurations
+
+Highly recommended to use this alongside the following configurations:
+
+- [dots2k](https://github.com/2kabhishek/dots2k) CLI Dev Environment
+- [nvim2k](https://github.com/2kabhishek/nvim2k) Personalized Editor
+- [rofi2k](https://github.com/2kabhishek/rofi2k) as rofi config
+- [sway2k](https://github.com/2kabhishek/sway2k) Wayland Desktop Environment
 
 ## 🚀 Usage
 
-```bash
-USAGE:
-    i3xfce2k [FLAGS] [OPTIONS]
-Example:
-    i3xfce2k
-```
+### Keybindings
 
-## 🏗️ What's Next
-
-Planning to add `<feature/module>`.
-
-### ✅ To-Do
-
-- [x] Setup repo
-- [ ] Think real hard
-- [ ] Start typing
+All the configured keybindings can be found in the [keybinding manual here](./docs/keybindings.md).
 
 ## 🧑‍💻 Behind The Code
 
 ### 🌈 Inspiration
 
-i3xfce2k was inspired by `<reason/idea>`.
+Needed a light and fast go to setup for my X11 Linux systems.
 
 ### 💡 Challenges/Learnings
 
-- The main challenges were `<issue/difficulty>`
-- I learned about `<learning/accomplishment>`
+- Integrating i3 as the native window manager in XFCE's `xfconf` failsafe session
+- Preventing `xfdesktop` overlay window conflicts
 
 ### 🧰 Tooling
 
@@ -93,8 +89,8 @@ i3xfce2k was inspired by `<reason/idea>`.
 
 ### 🔍 More Info
 
-- [shelly](https://github.com/2kabhishek/shelly) — Command line template
-- [tiny-web](https://github.com/2kabhishek/tiny-web) — Web app template
+- [sway2k](https://github.com/2kabhishek/sway2k) — Wayland based tiling wm configs
+- [dots2k](https://github.com/2kabhishek/dots2k) — Dev Environment
 
 <hr>
 
