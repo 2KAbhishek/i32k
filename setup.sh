@@ -7,7 +7,7 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     echo "Arch Linux detected. Preparing to install dependencies..."
 
     sudo pacman -S --needed \
-        i3-wm i3status i3lock rofi rofi-emoji kitty xclip cliphist \
+        autotiling i3-wm i3status i3lock rofi rofi-emoji kitty xclip cliphist \
         swappy maim xorg-xbacklight feh polkit-gnome network-manager-applet \
         xorg-xauth xorg-xinit xorg-xset xorg-xinput \
         xfce4-power-manager thunar tumbler thunar-archive-plugin thunar-volman \
