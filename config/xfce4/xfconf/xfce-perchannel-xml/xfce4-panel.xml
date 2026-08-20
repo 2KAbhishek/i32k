@@ -1,0 +1,94 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="16"/>
+      <property name="size" type="uint" value="20"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="4"/>
+        <value type="int" value="36"/>
+        <value type="int" value="3"/>
+        <value type="int" value="8"/>
+        <value type="int" value="29"/>
+        <value type="int" value="30"/>
+        <value type="int" value="6"/>
+        <value type="int" value="31"/>
+        <value type="int" value="28"/>
+        <value type="int" value="21"/>
+      </property>
+      <property name="mode" type="uint" value="0"/>
+      <property name="border-width" type="uint" value="4"/>
+      <property name="nrows" type="uint" value="1"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="applicationsmenu">
+      <property name="button-title" type="string" value="Apps"/>
+    </property>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+    </property>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="known-items" type="array">
+        <value type="string" value="dropbox-client-13590"/>
+        <value type="string" value="dropbox-client-1732"/>
+        <value type="string" value="dropbox-client-258165"/>
+        <value type="string" value="dropbox-client-248692"/>
+        <value type="string" value="dropbox-client-55009"/>
+        <value type="string" value="dropbox-client-1763"/>
+        <value type="string" value="dropbox-client-1423"/>
+        <value type="string" value="dropbox-client-2308"/>
+        <value type="string" value="dropbox-client-1426"/>
+        <value type="string" value="dropbox-client-2102"/>
+        <value type="string" value="dropbox-client-1897"/>
+        <value type="string" value="dropbox-client-1444"/>
+        <value type="string" value="dropbox-client-67448"/>
+        <value type="string" value="KeePassXC"/>
+        <value type="string" value="dropbox-client-1467"/>
+        <value type="string" value="Hubstaff"/>
+        <value type="string" value="dropbox-client-145311"/>
+      </property>
+    </property>
+    <property name="plugin-8" type="string" value="clock">
+      <property name="mode" type="uint" value="2"/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-format" type="string" value="%I:%M %p"/>
+      <property name="digital-time-font" type="string" value="Sans 9"/>
+    </property>
+    <property name="plugin-21" type="string" value="xfce4-clipman-plugin"/>
+    <property name="plugin-28" type="string" value="notification-plugin"/>
+    <property name="plugin-29" type="string" value="power-manager-plugin"/>
+    <property name="plugin-30" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="play-sound" type="bool" value="true"/>
+    </property>
+    <property name="plugin-31" type="string" value="screenshooter"/>
+    <property name="plugin-36" type="string" value="tasklist">
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
+    </property>
+    <property name="clipman" type="empty">
+      <property name="settings" type="empty">
+        <property name="add-primary-clipboard" type="bool" value="true"/>
+        <property name="show-qr-code" type="bool" value="false"/>
+      </property>
+      <property name="tweaks" type="empty">
+        <property name="popup-at-pointer" type="bool" value="true"/>
+        <property name="paste-on-activate" type="uint" value="0"/>
+      </property>
+    </property>
+  </property>
+</channel>
