@@ -22,7 +22,6 @@
         <value type="int" value="6"/>
         <value type="int" value="31"/>
         <value type="int" value="28"/>
-        <value type="int" value="21"/>
       </property>
       <property name="mode" type="uint" value="0"/>
       <property name="border-width" type="uint" value="4"/>
@@ -68,7 +67,6 @@
       <property name="digital-time-format" type="string" value="%I:%M %p"/>
       <property name="digital-time-font" type="string" value="Sans 9"/>
     </property>
-    <property name="plugin-21" type="string" value="xfce4-clipman-plugin"/>
     <property name="plugin-28" type="string" value="notification-plugin"/>
     <property name="plugin-29" type="string" value="power-manager-plugin"/>
     <property name="plugin-30" type="string" value="pulseaudio">
@@ -79,16 +77,6 @@
     <property name="plugin-36" type="string" value="tasklist">
       <property name="flat-buttons" type="bool" value="false"/>
       <property name="show-labels" type="bool" value="true"/>
-    </property>
-    <property name="clipman" type="empty">
-      <property name="settings" type="empty">
-        <property name="add-primary-clipboard" type="bool" value="true"/>
-        <property name="show-qr-code" type="bool" value="false"/>
-      </property>
-      <property name="tweaks" type="empty">
-        <property name="popup-at-pointer" type="bool" value="true"/>
-        <property name="paste-on-activate" type="uint" value="0"/>
-      </property>
     </property>
   </property>
 </channel>
