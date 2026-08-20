@@ -49,9 +49,6 @@ smart_gaps on
 # Drag floating windows with Mouse + $mod
 floating_modifier $mod
 
-# Escape keybinding disabled (global bindsym Escape swallows Escape key in all apps)
-# bindsym Escape [instance="floating_shell" con_id=__focused__] kill
-
 # Color Palette (BWnB Dark Theme)
 set $color0  #000000
 set $color1  #282a2b
@@ -298,16 +295,23 @@ for_window [class="Xfdesktop"] kill
 
 for_window [urgent=latest] focus
 
-# Autostart Services & Applications
-# Note: polkit, nm-applet, and xfce4-power-manager are handled by XFCE.
-# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id nm-applet
-# exec --no-startup-id xfce4-power-manager
-# Note: Commented out commands not currently installed: nitrogen, picom, volumeicon, xautolock
-# exec --no-startup-id nitrogen --restore
-# exec --no-startup-id picom -b
-# exec --no-startup-id volumeicon
-# exec --no-startup-id xautolock -time 10 -locker xflock4
+# Autostart background services & Touchpad setup ONLY when running standalone i3 (skipped under XFCE session)
+exec --no-startup-id sh -c 'if ! pgrep -x xfce4-session >/dev/null 2>&1; then \
+    TP=$(xinput list --name-only 2>/dev/null | grep -i "touchpad" | sed -e "s/^[[:space:]]*//" -e "s/^[^a-zA-Z0-9]*//" | head -n1); \
+    if [ -n "$TP" ]; then \
+        xinput set-prop "$TP" "libinput Tapping Enabled" 1 2>/dev/null; \
+        xinput set-prop "$TP" "libinput Natural Scrolling Enabled" 1 2>/dev/null; \
+        xinput set-prop "$TP" "libinput Accel Speed" 0.3 2>/dev/null; \
+    fi; \
+    [ -x /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ] && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & \
+    command -v nm-applet >/dev/null && nm-applet & \
+    command -v xfce4-power-manager >/dev/null && xfce4-power-manager & \
+    command -v nitrogen >/dev/null && nitrogen --restore & \
+    command -v picom >/dev/null && picom -b & \
+    command -v volumeicon >/dev/null && volumeicon & \
+    command -v xautolock >/dev/null && xautolock -time 10 -locker xflock4 & \
+fi'
+
 exec --no-startup-id $HOME/.config/i3/scripts/cliphist-x11-daemon.py &
 
 # i3bar setup with toggle support ($mod+b)
