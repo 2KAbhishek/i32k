@@ -30,11 +30,12 @@
 
 </div>
 
-My personalized configs for [i3 window manager](https://i3wm.org/) embedded inside [XFCE Desktop Environment](https://www.xfce.org/), minimalistic in design and optimized for developer productivity and speed.
+My personalized configs for [i3 window manager](https://i3wm.org/) embedded inside [XFCE Desktop Environment](https://www.xfce.org/) or as a standalone session, minimalistic in design and optimized for developer productivity and speed.
 
 ## ✨ Features
 
 - Optimized for keyboard driven CLI workflow with i3 tiling
+- Works seamlessly both embedded inside XFCE and as a standalone i3 session
 - Full XFCE session management, panel applets, and GTK theme support
 - Minimalistic UI, optimized for AMOLED displays
 - Customized i3status status bar with modern Nerd Font v3 icons and system modules
