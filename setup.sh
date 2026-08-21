@@ -9,7 +9,7 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     sudo pacman -S --needed \
         autotiling i3-wm i3status i3lock rofi rofi-emoji kitty xclip cliphist \
         swappy maim xorg-xbacklight feh polkit-gnome network-manager-applet \
-        xorg-xauth xorg-xinit xorg-xset xorg-xinput \
+        xorg-xauth xorg-xinit xorg-xset xorg-xinput picom \
         xfce4-power-manager thunar tumbler thunar-archive-plugin thunar-volman \
         ttf-firacode-nerd ttf-roboto python
 else
