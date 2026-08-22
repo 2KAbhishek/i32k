@@ -37,11 +37,9 @@ Zero desktop environment overhead — just pure, keyboard-driven tiling with mod
 ## ✨ Features
 
 - **Blazing Fast & Ultra-Light**: Near-zero idle footprint, instant window management, and zero desktop bloat
-- **Keyboard-Centric Workflow**: Intuitive tiling, workspace cycling, and dedicated scratchpad controls (`Win + e` / `Win + Shift + e`)
-- **Clean Top Status Bar**: Lightweight `i3status` featuring modern Nerd Font v3 icons and dynamic toggle support (`Win + b`)
-- **Integrated Utilities**: Seamless application launcher, window switcher, emoji picker, and clipboard manager via Rofi & cliphist
+- **Keyboard-Centric Workflow**: Intuitive tiling, workspace cycling, and dedicated navigation controls
+- **Clean Top Status Bar**: Lightweight `i3status` powered by a custom wrapper, providing additional modules with on-click popups
 - **AMOLED-Optimized Aesthetic**: Minimalist, distraction-free color palette tuned for focus and low eye strain
-- **Native System Controls**: Instant lock, sleep, reboot, and shutdown shortcuts with zero lag
 
 ## ⚡ Setup
 
@@ -76,7 +74,7 @@ All the configured keybindings can be found in the [keybinding manual here](./do
 
 ### 🌈 Inspiration
 
-Built out of a need for a lightning-fast, distraction-free X11 environment that gets out of the way and lets you focus on coding.
+Needed X11 support for certain apps, which were not supported by my wayland config [sway2k](https://github.com/2kabhishek/sway2k), so I spun this up
 
 ### 💡 Challenges/Learnings
 
