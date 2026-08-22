@@ -280,7 +280,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Galculator"] floating enable border pixel 2
 for_window [class="GParted"] floating enable
 for_window [class="octopi"] floating enable
-for_window [class="floating_shell"] floating enable border pixel 2 sticky enable
+for_window [class="floating_shell"] floating enable, resize set 900 px 600 px, move position center, border pixel 2, sticky enable
 for_window [title="(?i)picture-in-picture"] floating enable sticky enable
 for_window [title="(?i)alsamixer"] floating enable border pixel 2
 for_window [class="(?i)hubstaff"] floating enable, sticky disable
@@ -304,7 +304,7 @@ bar {
     mode dock
     modifier Mod4
     i3bar_command i3bar
-    status_command i3status -c ~/.config/i3/i3status.conf
+    status_command $HOME/.config/i3/scripts/i3status-wrapper/main.py
     position top
     strip_workspace_numbers yes
     bindsym button4 nop
