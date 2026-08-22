@@ -6,7 +6,7 @@ Maps (block_name, mouse_button) to terminal commands and system utilities.
 import os
 import subprocess
 
-TERM_FLOAT = ["kitty", "--single-instance", "--class", "floating_shell", "-e"]
+TERM_FLOAT = ["kitty", "-1", "--class", "floating_shell", "-e"]
 HOME = os.path.expanduser("~")
 
 CLICK_ACTIONS = {
