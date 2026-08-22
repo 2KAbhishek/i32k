@@ -4,7 +4,7 @@
 #          focus_or_launch.sh chromium chromium
 
 CMD="$1"
-SEARCH="${2:-$1}"
+SEARCH="${2:-${1%% *}}"
 
 if [ -z "$CMD" ]; then
     echo "Usage: $0 <command> [class_search]"
@@ -17,5 +17,5 @@ WIN_ID=$(i3-msg -t get_tree | jq -r '.. | select(.window_properties? | select((.
 if [ -n "$WIN_ID" ]; then
     i3-msg "[con_id=\"$WIN_ID\"] focus"
 else
-    "$CMD" &
+    eval "$CMD &"
 fi
