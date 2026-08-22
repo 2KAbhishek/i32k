@@ -198,8 +198,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 || brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 || brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
@@ -279,7 +279,6 @@ for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Galculator"] floating enable border pixel 2
 for_window [class="GParted"] floating enable
-for_window [class="Nitrogen"] floating enable sticky enable
 for_window [class="octopi"] floating enable
 for_window [class="floating_shell"] floating enable border pixel 2 sticky enable
 for_window [title="(?i)picture-in-picture"] floating enable sticky enable
@@ -297,7 +296,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id $HOME/.config/i3/scripts/cliphist-x11-daemon.py
 exec --no-startup-id sh -c 'command -v autotiling >/dev/null 2>&1 && autotiling'
 exec --no-startup-id sh -c 'command -v dropbox >/dev/null 2>&1 && dropbox start'
-exec --no-startup-id sh -c 'command -v nitrogen >/dev/null 2>&1 && nitrogen --restore'
+exec_always --no-startup-id xsetroot -solid "$color0"
 exec --no-startup-id sh -c 'command -v picom >/dev/null 2>&1 && picom -b --config ~/.config/i3/picom.conf'
 exec --no-startup-id sh -c 'command -v xautolock >/dev/null 2>&1 && xautolock -time 10 -locker i3lock'
 
