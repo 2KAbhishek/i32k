@@ -26,7 +26,7 @@ set $term-font FiraCode Nerd Font 10
 # Input Configuration (Keyboard, Repeat Rate & Touchpad)
 exec_always --no-startup-id setxkbmap -layout us -option "" -option caps:escape
 exec_always --no-startup-id xset r rate 250 70
-exec_always --no-startup-id sh -c 'for id in $(xinput list 2>/dev/null | grep -i "touchpad" | grep -o "id=[0-9]*" | cut -d= -f2); do xinput set-prop "$id" "libinput Tapping Enabled" 1 2>/dev/null; xinput set-prop "$id" "libinput Natural Scrolling Enabled" 1 2>/dev/null; xinput set-prop "$id" "libinput Accel Speed" 0.3 2>/dev/null; done'
+exec_always --no-startup-id sh -c 'for id in $(xinput list 2>/dev/null | grep -i "touchpad" | grep -o "id=[0-9]*" | cut -d= -f2); do xinput set-prop "$id" "libinput Tapping Enabled" 1 2>/dev/null; xinput set-prop "$id" "libinput Natural Scrolling Enabled" 1 2>/dev/null; xinput set-prop "$id" "libinput Accel Speed" 0.1 2>/dev/null; done'
 
 # Helper scripts
 set $scripts $HOME/.config/i3/scripts
