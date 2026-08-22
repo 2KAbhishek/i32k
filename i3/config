@@ -292,7 +292,6 @@ focus_wrapping workspace
 
 # Autostart background services
 exec --no-startup-id sh -c 'command -v lxqt-policykit-agent >/dev/null 2>&1 && lxqt-policykit-agent || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1'
-exec --no-startup-id xfce4-power-manager
 exec --no-startup-id $HOME/.config/i3/scripts/cliphist-x11-daemon.py
 exec_always --no-startup-id sh -c 'killall -q autotiling; command -v autotiling >/dev/null 2>&1 && autotiling'
 exec --no-startup-id sh -c 'command -v dropbox >/dev/null 2>&1 && dropbox start'
