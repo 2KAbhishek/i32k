@@ -17,7 +17,7 @@ set $up_alt k
 set $right_alt l
 
 # Preferred Applications
-set $terminal kitty
+set $terminal kitty --single-instance
 set $browser chromium
 set $editor nvim
 set $gui-font Roboto 10
@@ -33,7 +33,7 @@ set $scripts $HOME/.config/i3/scripts
 set $term_float $terminal --class floating_shell
 
 # Launchers
-set $menu rofi -show combi -combi-modi drun,run -terminal kitty -show-icons -lines 10 -width 35
+set $menu rofi -show combi -combi-modi drun,run -terminal "kitty --single-instance" -show-icons -lines 10 -width 35
 
 # Font for window titles and bar
 font xft:FiraCode Nerd Font 10
