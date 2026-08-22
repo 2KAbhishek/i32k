@@ -8,7 +8,7 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
 
     sudo pacman -S --needed \
         autotiling i3-wm i3status i3lock rofi rofi-emoji kitty xclip cliphist \
-        swappy maim brightnessctl xorg-xsetroot polkit-gnome networkmanager \
+        swappy maim brightnessctl xorg-xsetroot polkit-gnome networkmanager jq playerctl \
         xorg-xauth xorg-xinit xorg-xset xorg-xinput picom \
         xfce4-power-manager thunar tumbler thunar-archive-plugin thunar-volman \
         ttf-firacode-nerd ttf-roboto python
