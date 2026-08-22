@@ -6,10 +6,11 @@ set -e
 if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     echo "Arch Linux detected. Preparing to install dependencies..."
     sudo pacman -S --needed \
-        autotiling i3-wm i3status i3lock xss-lock rofi rofi-emoji kitty xclip cliphist \
-        swappy maim brightnessctl xorg-xsetroot lxqt-policykit networkmanager jq playerctl \
-        xorg-xauth xorg-xinit xorg-xset xorg-xinput picom ttf-firacode-nerd ttf-roboto python \
-        thunar tumbler thunar-archive-plugin thunar-volman
+        autotiling brightnessctl btop calcurse cliphist i3-wm i3lock i3status jq \
+        kitty lxqt-policykit maim ncdu networkmanager picom playerctl pulsemixer \
+        python ranger rofi rofi-emoji swappy thunar thunar-archive-plugin \
+        thunar-volman ttf-firacode-nerd ttf-roboto tumbler xclip xorg-setxkbmap \
+        xorg-xauth xorg-xinit xorg-xinput xorg-xset xorg-xsetroot xss-lock
 else
     echo "Warning: This script only supports package installation on Arch-based systems."
 fi
