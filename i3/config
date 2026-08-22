@@ -17,7 +17,7 @@ set $up_alt k
 set $right_alt l
 
 # Preferred Applications
-set $terminal kitty --single-instance
+set $terminal kitty -1
 set $browser chromium
 set $editor nvim
 set $gui-font Roboto 10
@@ -33,7 +33,7 @@ set $scripts $HOME/.config/i3/scripts
 set $term_float $terminal --class floating_shell
 
 # Launchers
-set $menu rofi -show combi -combi-modi drun,run -terminal "kitty --single-instance" -show-icons -lines 10 -width 35
+set $menu rofi -show combi -lines 10 -width 35
 
 # Font for window titles and bar
 font xft:FiraCode Nerd Font 10
@@ -172,7 +172,7 @@ bindsym F12 exec --no-startup-id $term_float
 bindsym $mod+bracketleft exec --no-startup-id "$scripts/focus_or_launch.sh $terminal"
 bindsym $mod+bracketright exec --no-startup-id "$scripts/focus_or_launch.sh $browser"
 
-bindsym $mod+space exec --no-startup-id "$menu"
+bindsym $mod+space exec --no-startup-id $menu
 bindsym $mod+b bar mode toggle
 bindsym $mod+period exec --no-startup-id "rofi -show emoji"
 bindsym $mod+a exec --no-startup-id "rofi -show window"
