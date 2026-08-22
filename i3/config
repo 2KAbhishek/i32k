@@ -298,7 +298,7 @@ exec_always --no-startup-id sh -c 'killall -q autotiling; command -v autotiling 
 exec --no-startup-id sh -c 'command -v dropbox >/dev/null 2>&1 && dropbox start'
 exec_always --no-startup-id xsetroot -solid "$color0"
 exec --no-startup-id sh -c 'command -v picom >/dev/null 2>&1 && picom -b --config ~/.config/i3/picom.conf'
-exec --no-startup-id sh -c 'command -v xautolock >/dev/null 2>&1 && xautolock -time 10 -locker i3lock'
+exec --no-startup-id sh -c 'command -v xss-lock >/dev/null 2>&1 && xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork'
 
 # i3bar setup with toggle support ($mod+b)
 bar {
