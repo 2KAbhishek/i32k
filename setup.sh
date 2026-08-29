@@ -13,10 +13,18 @@ case "${OSTYPE:-$(uname -s)}" in
 esac
 readonly HOST_OS
 
+cmd_sudo() {
+    if [[ "$EUID" -ne 0 ]] && command -v sudo &>/dev/null; then
+        sudo "$@"
+    else
+        "$@"
+    fi
+}
+
 # Detect if the system is Arch-based
 if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
     echo "Arch Linux detected. Preparing to install dependencies..."
-    sudo pacman -S --needed --noconfirm \
+    cmd_sudo pacman -S --needed --noconfirm \
         autotiling brightnessctl btop calcurse cliphist i3-wm i3lock i3status jq \
         kitty lxqt-policykit maim ncdu networkmanager picom playerctl pulsemixer \
         python ranger rofi rofi-emoji swappy thunar thunar-archive-plugin \
