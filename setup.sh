@@ -36,7 +36,6 @@ fi
 
 echo "Creating system directories..."
 mkdir -p "$HOME/Pictures/Screenshots"
-mkdir -p "$HOME/.config/i3"
 
 echo "Creating symlinks to ~/.config..."
 ln -sfnv "$current_dir/i3" "$HOME/.config/i3"
