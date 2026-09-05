@@ -129,15 +129,15 @@ bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
 # Move Focused Window
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+$left exec "$scripts/move.py left"
+bindsym $mod+Shift+$down exec "$scripts/move.py down"
+bindsym $mod+Shift+$up exec "$scripts/move.py up"
+bindsym $mod+Shift+$right exec "$scripts/move.py right"
 
-bindsym $mod+Shift+$left_alt move left
-bindsym $mod+Shift+$down_alt move down
-bindsym $mod+Shift+$up_alt move up
-bindsym $mod+Shift+$right_alt move right
+bindsym $mod+Shift+$left_alt exec "$scripts/move.py left"
+bindsym $mod+Shift+$down_alt exec "$scripts/move.py down"
+bindsym $mod+Shift+$up_alt exec "$scripts/move.py up"
+bindsym $mod+Shift+$right_alt exec "$scripts/move.py right"
 
 # Move Focused Workspace to Output
 bindsym $mod+$alt_mod+$right move workspace to output right
