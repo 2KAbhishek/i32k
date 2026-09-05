@@ -28,8 +28,9 @@ if [ -f /etc/arch-release ] || command -v pacman &>/dev/null; then
         autotiling brightnessctl btop calcurse cliphist i3-wm i3lock i3status jq \
         kitty lxqt-policykit maim ncdu networkmanager picom playerctl pulsemixer \
         python ranger rofi rofi-emoji swappy thunar thunar-archive-plugin \
-        thunar-volman ttf-firacode-nerd ttf-roboto tumbler xclip xorg-setxkbmap \
-        xorg-xauth xorg-xinit xorg-xinput xorg-xset xorg-xsetroot xss-lock
+        thunar-volman ttf-firacode-nerd ttf-roboto tumbler xclip xorg-server \
+        xorg-setxkbmap xorg-xauth xorg-xinit xorg-xinput xorg-xset xorg-xsetroot \
+        xss-lock
 else
     echo "Warning: This script only supports automated package installation on Arch-based systems."
 fi
