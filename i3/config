@@ -302,6 +302,7 @@ exec --no-startup-id sh -c 'command -v xss-lock >/dev/null 2>&1 && xss-lock --tr
 # i3bar setup with toggle support ($mod+b)
 bar {
     height 24
+    font pango:FiraCode Nerd Font 12px
     mode dock
     modifier Mod4
     i3bar_command i3bar
