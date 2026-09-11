@@ -320,7 +320,7 @@ bar {
         focused_workspace  $color12 $color12 $color0
         active_workspace   $color3  $color1  $color6
         inactive_workspace $color1  $color0  $color5
-        binding_mode       $color12 $color2  $color7
+        binding_mode       $color0  $color0  $color6
         urgent_workspace   $color8  $color8  $color0
     }
 }
