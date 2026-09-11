@@ -205,28 +205,28 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Mode: Resize & Gaps
-set $mode_resize "Resize: hjkl/Arrows | Gaps: +/-"
+set $mode_resize "hjkl/arrows  resize | +/-  gaps"
 bindsym $mod+r mode $mode_resize
 
 mode $mode_resize {
     bindsym $left resize shrink width 10 px
-    bindsym $down resize grow height 10 px
-    bindsym $up resize shrink height 10 px
+    bindsym $down resize shrink height 10 px
+    bindsym $up resize grow height 10 px
     bindsym $right resize grow width 10 px
 
     bindsym $left_alt resize shrink width 10 px
-    bindsym $down_alt resize grow height 10 px
-    bindsym $up_alt resize shrink height 10 px
+    bindsym $down_alt resize shrink height 10 px
+    bindsym $up_alt resize grow height 10 px
     bindsym $right_alt resize grow width 10 px
 
     bindsym Shift+$left resize shrink width 50 px
-    bindsym Shift+$down resize grow height 50 px
-    bindsym Shift+$up resize shrink height 50 px
+    bindsym Shift+$down resize shrink height 50 px
+    bindsym Shift+$up resize grow height 50 px
     bindsym Shift+$right resize grow width 50 px
 
     bindsym Shift+$left_alt resize shrink width 50 px
-    bindsym Shift+$down_alt resize grow height 50 px
-    bindsym Shift+$up_alt resize shrink height 50 px
+    bindsym Shift+$down_alt resize shrink height 50 px
+    bindsym Shift+$up_alt resize grow height 50 px
     bindsym Shift+$right_alt resize grow width 50 px
 
     bindsym minus gaps inner current minus 5
@@ -237,7 +237,7 @@ mode $mode_resize {
 }
 
 # Mode: Screenshot (maim + xclip + swappy)
-set $mode_screenshot "Screenshot: [s] Copy Area | [f] Save Area | [e] Edit Swappy | [o] Save Screen"
+set $mode_screenshot "s  copy | f  save | e  edit | o  screen"
 bindsym Print mode $mode_screenshot
 bindsym $mod+Shift+s mode $mode_screenshot
 
@@ -252,7 +252,7 @@ mode $mode_screenshot {
 }
 
 # Mode: System / Shutdown
-set $mode_shutdown "System: [l]ock | [e]xit | [u]spend | [r]eboot | [s]hutdown"
+set $mode_shutdown "e 󰗼 exit | l  lock | r  reboot | s  power | u  sleep"
 bindsym $mod+Shift+q mode $mode_shutdown
 
 mode $mode_shutdown {
